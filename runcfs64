@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ ! -e sseutils64.o ]]; then nasm -f elf64 sseutils64.nasm; fi;
+nasm -f elf64 cfs64.nasm
+for f in $(ls *64.nasm); do
+	nasm -f elf64 $f;
+done;
+gcc -B/usr/bin -B/usr/lib/gcc/x86_64-linux-gnu/7 -m64 -msse -mavx -O0 -no-pie *64.o cfs64c.c -o cfs64c -lm
+pars="";
+for arg; do pars=$pars" "$arg; done;
+./cfs64c $pars

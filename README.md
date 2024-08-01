@@ -6,7 +6,7 @@ L'ottimizzazione riguarda l'utilizzo di tecniche e meccanismi discussi nel file 
 In generale, sono state presentate le seguenti implementazioni:
 1. cfs32c.c - versione 32 bit del meccanismo di CFS
 2. cfs64c.c - versione 64 bit del meccanismo di CFS
-3. cfs32c_omp.c e cfs64c_omp.c - versione a 32 e 64 bit del meccanismo di CFS facente usso della libraria OMP.
+3. cfs32c_omp.c e cfs64c_omp.c - versione a 32 e 64 bit del meccanismo di CFS in cui si fa uso della libraria OMP.
 
 L'ottimizzazione ha previsto la definizione di procedure in linguaggio assembly per l'esecuzione delle operazioni "dominanti" 
 dell'algoritmo di CFS.
